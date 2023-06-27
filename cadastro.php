@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarefa</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="body">
+    <div class="container">
+        <h3>Cadastro</h3>
+        <form name="login" method="post" action="">
+            <div>
+                <label for="nome">Nome:</label>
+                <input type="text" name="nome" maxLenght="50" required>
+            </div>
+            <div>
+                <label for="email">E-mail:</label>
+                <input type="email" name="email" maxlenght="20" required>
+            </div>
+            <div>
+                <label for="senha">Senha:</label>
+                <input type="password" name="senha" maxlenght="20" required>
+            </div>
+            <input class="input" type="submit" value="Cadastrar" name="cadastrar">
+        </form>
+        <div>
+        <a href='./index.php'><p>Inicio</p></a>
+        </div>
+        <?php
+        if(isset($_POST["cadastrar"]))
+        {
+            $nome = $_POST["nome"];
+            $senha = $_POST["senha"];
+            $email = $_POST["email"];
+
+            session_start();
+            $_SESSION['nome'] = $nome;
+            $_SESSION['senha'] = $senha;
+            $_SESSION['email'] = $email;
+            echo "<div>";
+                echo "<h3>Cadastro realizado!</h3>";
+                echo "<a href='./dados.php'><h4>Dados</4></a>";
+            echo "</div>";
+        }
+    ?>
+    </div>
+    
+</body>
+</html>

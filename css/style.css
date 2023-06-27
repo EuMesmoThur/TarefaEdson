@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    outline: 0;
+}
+.container {
+    background-color: rgba(241, 231, 218, 0.836); 
+    border:2px solid rgba(0, 0, 0, 0.199); 
+    padding: 10px; 
+    text-align:justify;
+}
+.body {
+    font-size: 40px;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.input {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.781);
+
+}
+.body2 {
+    width: 100vw;
+    height: 100vh;
+    font-size: 40px;
+    display: block;
+    text-align: center;
+}
